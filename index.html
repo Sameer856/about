@@ -95,9 +95,20 @@
 
   footer{padding:26px 0;border-top:1px solid #e8ecf1;text-align:center;font-size:.88rem;color:var(--soft)}
 
+  @media(max-width:768px){
+    .wrap{padding:0 18px}
+    .head-grid{flex-direction:column;align-items:center;text-align:center;gap:22px}
+    .head-text .tagline{margin-left:auto;margin-right:auto}
+    .socials{justify-content:center}
+    .entry{padding-left:18px}
+  }
   @media(max-width:560px){
+    body{font-size:16px;line-height:1.65}
     header{padding-top:56px}
     .photo{width:130px;height:130px}
+    .quote{padding:72px 0 52px}
+    .cta{padding-bottom:80px}
+    .btn{width:100%;justify-content:center}
   }
 </style>
 </head>
