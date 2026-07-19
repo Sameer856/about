@@ -33,6 +33,7 @@
 
   header{padding:80px 0 24px}
   .head-grid{display:flex;gap:36px;align-items:flex-start;flex-wrap:wrap}
+  .head-text{flex:1;min-width:0}
   .photo{
     width:170px;height:170px;border-radius:14px;object-fit:cover;flex:none;
     background:var(--chip);
@@ -42,7 +43,7 @@
     line-height:1.1;letter-spacing:-.01em;
   }
   .head-text .tagline{margin-top:14px;font-size:1.12rem;max-width:520px}
-  .socials{display:flex;gap:12px;margin-top:22px}
+  .socials{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
   .socials a{
     width:44px;height:44px;border-radius:10px;background:var(--chip);
     display:flex;align-items:center;justify-content:center;
@@ -95,18 +96,29 @@
 
   footer{padding:26px 0;border-top:1px solid #e8ecf1;text-align:center;font-size:.88rem;color:var(--soft)}
 
+  @media(max-width:900px){
+    header{padding-top:64px}
+    .head-grid{gap:28px}
+    .head-text h1{font-size:clamp(2rem,8vw,2.8rem)}
+  }
   @media(max-width:768px){
     .wrap{padding:0 18px}
     .head-grid{flex-direction:column;align-items:center;text-align:center;gap:22px}
     .head-text .tagline{margin-left:auto;margin-right:auto}
     .socials{justify-content:center}
+    .entry-head{gap:8px}
+    h2{font-size:1.55rem;margin-bottom:26px}
     .entry{padding-left:18px}
   }
   @media(max-width:560px){
     body{font-size:16px;line-height:1.65}
-    header{padding-top:56px}
+    .wrap{padding:0 14px}
+    header{padding-top:48px}
     .photo{width:130px;height:130px}
+    .intro{padding-top:30px}
+    .years{padding-top:34px}
     .quote{padding:72px 0 52px}
+    .quote .attr{font-size:.98rem}
     .cta{padding-bottom:80px}
     .btn{width:100%;justify-content:center}
   }
